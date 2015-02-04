@@ -41,7 +41,7 @@ public class MainFrame extends JFrame{
 		
 
 		
-		ActionListener about = new ActionListener(){
+		final ActionListener about = new ActionListener(){
 			public void actionPerformed(ActionEvent c){
 				SystemInformationDlg help = new SystemInformationDlg("About");
 				help.setVisible(true);	
@@ -117,11 +117,11 @@ public class MainFrame extends JFrame{
 				getContentPane().add(menuBar);
 				//this.setJMenuBar(menuBar);
 				JMenu menu = new JMenu("Help");
-				JMenuItem displayhelp = new JMenuItem("About");
+				 JMenuItem displayhelp = new JMenuItem("About");
 				displayhelp.addActionListener(about);
 				menu.add(displayhelp);
 				
-				ActionListener about = new ActionListener(){
+				final ActionListener about = new ActionListener(){
 					public void actionPerformed(ActionEvent c){
 						//SystemInformationDlg help = new SystemInformationDlg("About");
 						//help.setVisible(true);	
